@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import { ApiContext } from "../contexts/ApiContext";
+import PokemonCard from "../components/PokemonCard";
 
 export default function CardSearchByName(){
 
@@ -44,7 +45,13 @@ export default function CardSearchByName(){
 			{searchResults.length > 0 && 
 			<div>
 				<h1>{searchResults[0].name} - {searchResults[0].id}</h1>
-			</div>
+			
+                {searchResults.map(result => {
+                    return <PokemonCard cardTitle={result.name} 
+                    imageUrl={result.images.small} 
+                    cardDescription={result.flavorText} />
+                })}
+            </div>
 			}
 		</div>
     )
