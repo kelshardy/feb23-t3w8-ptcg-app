@@ -13,8 +13,8 @@ export default function ApiProvider({children}){
     return(
         <ApiContext.Provider value={
             {
-                apiUrl: apiUrl, 
-                setApiUrl: setApiUrl
+                api: apiUrl, 
+                setApi: setApiUrl
             }
         }>
             {children}

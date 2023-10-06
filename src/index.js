@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import ApiProvider from './contexts/ApiContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CardSearchByName from './pages/CardSearchByName';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
